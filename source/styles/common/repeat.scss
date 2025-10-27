@@ -1,0 +1,12 @@
+.section-sign{
+  @include font(700, 12px, 16px, normal);
+  letter-spacing: 0.04em;
+  color: $base-primary-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-title{
+  @include font(700, 24px, 36px);
+  text-align: center;
+}

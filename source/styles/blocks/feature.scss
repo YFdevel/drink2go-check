@@ -1,0 +1,32 @@
+.feature{
+  @include flex(column, flex-start, stretch, wrap);
+  text-align: center;
+}
+
+
+.feature__icon {
+  width: 46px;
+  height: 56px;
+  display: block;
+  background-image: url("../../icons/features-speed-50-56.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 10px;
+}
+
+.feature__icon--fit {
+  background-image: url("../../icons/features-fit-52-56.svg");
+}
+
+.feature__icon--energy {
+  background-image: url("../../icons/features-energy-42-56.svg");
+}
+
+.feature__icon--eco {
+  background-image: url("../../icons/features-eco-46-56.svg");
+}
+
+.feature__heading{
+  @include font(700, 18px, 32px);
+}
+

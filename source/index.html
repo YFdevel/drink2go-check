@@ -2,40 +2,44 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="fonts/montserrat/Montserrat-Regular.woff2" type="font/woff2" as="font">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicons/180.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 <body class="page__body">
-<header class="header" data-test="header">
+<header class="header container" data-test="header">
   <div class="header__logo-wrapper">
     <a class="header__logo" href="https://htmlacademy.ru/intensive/adaptive">
       <picture>
         <source
           media="(min-width: 1440px)"
-          srcset=""
-          width="70"
-          height="59"
+          srcset="./images/header-logo-desktop-170-36.svg"
+          width="170"
+          height="36"
         />
         <source
           media="(min-width: 768px)"
-          srcset=""
-          width="60"
-          height="50"
+          srcset="./images/header-logo-tablet-82-36.svg"
+          width="82"
+          height="36"
         />
         <img
           class="header__logo-image"
-          src=""
+          src="./images/header-logo-mobile-32-36.svg"
           alt="Drink2Go."
-          width="33"
-          height="38"
+          width="32"
+          height="36"
         />
       </picture>
     </a>
-    <a class="header__logo-sign" href="https://htmlacademy.ru/intensive/adaptive">Интернет-магазин кофейных напитков</a>
+    <p class="header__logo-sign">Интернет-магазин кофейных напитков</p>
   </div>
   <nav class="header__nav">
     <ul class="header__nav-list">
@@ -53,35 +57,81 @@
       </li>
     </ul>
   </nav>
-  <button class="header__mobile-menu js-toggle-button">Моб. меню</button>
+  <button class="header__mobile-menu js-toggle-button">
+    <span class="visually-hidden">Кнопка открытия мобильного меню</span>
+  </button>
   <div class="header__user-wrapper">
-    <a class="header__user" href="#">Войти</a>
-    <a class="header__user-cart" href="#">Корзина</a>
+    <a class="header__user" href="#"><span class="header__user-ico"></span><span class="header__user-text">Войти</span></a>
+    <a class="header__user-cart" href="#"><span class="header__user-ico header__user-ico--cart"></span><span class="header__user-text">Корзина</span></a>
   </div>
 </header>
 <main class="main">
-  <section class="hero" data-test="hero">
-    <h1 class="hero__title">Основной заголовок</h1>
+  <section class="hero container" data-test="hero">
+    <h1 class="hero__title visually-hidden">Drink2Go.</h1>
     <div class="hero__slider carousel">
       <div class="carousel__item slide active">
         <div class="slide__image-wrapper">
-          <img src="" alt="" class="slide__image">
+          <picture>
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="./images/hero-flat-white-desktop@1x.webp 1x,./images/hero-flat-white-desktop@2x.webp 2x"
+              width="600"
+              height="600"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="./images/hero-flat-white-tablet@1x.webp 1x,./images/hero-flat-white-tablet@2x.webp 2x"
+              width="476"
+              height="476"
+            />
+            <source
+              type="image/webp"
+              srcset="./images/hero-flat-white-mobile@1x.webp 1x,./images/hero-flat-white-mobile@2x.webp 2x"
+              width="280"
+              height="280"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="./images/hero-flat-white-desktop@1x.png 1x,./images/hero-flat-white-desktop@2x.png 2x"
+              width="600"
+              height="600"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/hero-flat-white-tablet@1x.png 1x, ./images/hero-flat-white-tablet@2x.png 2x"
+              width="476"
+              height="476"
+            />
+          <img
+            src="./images/hero-flat-white-mobile@1x.png"
+            srcset="./images/hero-flat-white-mobile@2x.png 2x"
+            alt="Декаф Флэт Уайт."
+            width="280"
+            height="280"
+            class="slide__image">
+          </picture>
         </div>
         <div class="slide__content promo">
-          <span class="promo__sign">Новинка!</span>
+          <p class="promo__sign section-sign">Новинка!</p>
           <h2 class="promo__title">Декаф Флэт Уайт</h2>
           <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии
             с натуральным фермерским молоком — то, что нужно
             для расслабления после тяжёлого рабочего дня</p>
-          <div class="promo__prices">
-            <span class="promo__price promo__price--old">295₽</span>
-            <span class="promo__price">225₽</span>
+          <div class="promo__footer">
+            <div class="promo__prices">
+              <span class="promo__price promo__price--old">295₽</span>
+              <span class="promo__price">225₽</span>
+            </div>
+            <button class="promo__button">Заказать</button>
           </div>
-          <button class="promo__button">Заказать</button>
         </div>
       </div>
-      <button class="carousel__button slider-button-prev" id="btn-prev"></button>
-      <button class="carousel__button slider-button-next" id="btn-next"></button>
+      <div class="carousel__arrows">
+        <button class="carousel__button slider-button-prev" id="btn-prev"></button>
+        <button class="carousel__button carousel__button--next slider-button-next" id="btn-next"></button>
+      </div>
     </div>
     <div class="hero__slider-dots slider-pagination">
       <span class="dot active"></span>
@@ -89,29 +139,37 @@
       <span class="dot"></span>
     </div>
   </section>
-  <section class="features" data-test="features">
-    <span class="features__sign">Преимущества</span>
-    <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+  <section class="features container" data-test="features">
+    <p class="features__sign section-sign">Преимущества</p>
+    <h2 class="features__title section-title">Главные причины выбрать Drink2Go</h2>
     <ul class="features__list">
       <li class="features__item feature">
-        <div class="feature__icon"></div>
-        <h3 class="feature__heading">Скорость</h3>
-        <p class="feature__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        <div class="feature__icon feature__icon--speed"></div>
+        <div class="feature__content">
+          <h3 class="feature__heading">Скорость</h3>
+          <p class="feature__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        </div>
       </li>
       <li class="features__item feature">
-        <div class="feature__icon"></div>
-        <h3 class="feature__heading">Удобство</h3>
-        <p class="feature__description">Легко помещается и в карман, и в маленькую сумочку</p>
+        <div class="feature__icon feature__icon--fit"></div>
+        <div class="feature__content">
+          <h3 class="feature__heading">Удобство</h3>
+          <p class="feature__description">Легко помещается и в карман, и в маленькую сумочку</p>
+        </div>
       </li>
       <li class="features__item feature">
-        <div class="feature__icon"></div>
-        <h3 class="feature__heading">Бодрость</h3>
-        <p class="feature__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        <div class="feature__icon feature__icon--energy"></div>
+        <div class="feature__content">
+          <h3 class="feature__heading">Бодрость</h3>
+          <p class="feature__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </div>
       </li>
       <li class="features__item feature">
-        <div class="feature__icon"></div>
-        <h3 class="feature__heading">Экологичность</h3>
-        <p class="feature__description">Вся упаковка сделана из перерабатываемых материалов</p>
+        <div class="feature__icon feature__icon--eco"></div>
+        <div class="feature__content">
+          <h3 class="feature__heading">Экологичность</h3>
+          <p class="feature__description">Вся упаковка сделана из перерабатываемых материалов</p>
+        </div>
       </li>
     </ul>
   </section>

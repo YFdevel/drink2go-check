@@ -1,5 +1,75 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $base-white-color;
+  color: $base-black-color;
+  min-height: 60px;
+  @include flex(row, flex-end, center, wrap);
+}
+
+.header__logo-wrapper{
+  margin-right: auto;
+}
+
+.header__logo-sign {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+.header__mobile-menu {
+  @include button-reset();
+  order: 2;
+  margin-left: 22px;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: $base-black-color;
+    @include mask-image("../../icons/header-mobile-menu-16-16.svg");
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__nav {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.header__user-wrapper {
+  @include flex(row, flex-start, center, wrap);
+  a {
+    @include flex(row, flex-start, center, no-wrap);
+  }
+}
+
+.header__user-ico {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: $base-black-color;
+    @include mask-image("../../icons/header-user-16-16.svg");
+  }
+}
+
+.header__user-ico--cart {
+  margin-left: 22px;
+  &::before {
+    @include mask-image("../../icons/header-basket-16-16.svg");
+  }
+}
+
+.header__user-text {
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }
