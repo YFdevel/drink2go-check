@@ -1,4 +1,4 @@
-.hero{
+.hero {
   padding-top: 20px;
   padding-bottom: 60px;
   background-color: $bg-flat-white-color;
@@ -6,72 +6,59 @@
   position: relative;
 }
 
-.promo__sign{
+.promo__sign {
   margin: 10px 0 4px;
 }
 
-.promo__title{
+.promo__title {
   @include font(700, 36px, 48px, normal);
   letter-spacing: 0.02em;
   text-align: center;
   margin: 0 0 10px;
 }
 
-.promo__description{
+.promo__description {
   text-align: center;
   margin: 0 0 20px;
 }
 
-.promo__price{
-  @include font(600, 20px, 32px);
-}
-
-.promo__price--old{
+.promo__price--old {
   @include font(400, 16px, 32px);
   color: $base-primary-color;
   text-decoration: line-through;
 }
 
-.promo__button{
-  @include button-reset();
-  background-color: $base-primary-color;
-  font-family: $base-font-family;
-  @include font(400, 16px, 24px);
-  color: $base-white-color;
-  padding: 8px 20px;
-  border-radius: 4px;
-}
-
-.promo__footer{
+.promo__footer {
   @include flex(row, space-between, center, wrap);
   padding: 0 15px;
 }
 
-.carousel__arrows{
+.carousel__arrows {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+
   @include flex(row, space-between, center);
   width: 100%;
 }
 
-.carousel__button{
+.carousel__button {
   @include button-reset();
+
   &::before {
     content: "";
     width: 20px;
     height: 20px;
     display: block;
     background: $base-primary-color;
+
     @include mask-image("../../icons/pagination-arrow-left.svg");
   }
 }
 
-.carousel__button--next{
+.carousel__button--next {
   &::before {
     @include mask-image("../../icons/pagination-arrow-right.svg");
   }
 }
-
-

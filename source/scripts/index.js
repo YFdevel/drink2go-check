@@ -10,7 +10,7 @@ const formatForSlider = {
 };
 
 noUiSlider.create(rangeSlider, {
-  start: [200, 800],
+  start: [0, 900],
   connect: true,
   range: {
     min: 0,
@@ -20,8 +20,8 @@ noUiSlider.create(rangeSlider, {
 });
 
 const formatValues = [
-  document.getElementById('min_num'),
-  document.getElementById('max_num'),
+  document.getElementById('min-num'),
+  document.getElementById('max-num'),
 ];
 
 rangeSlider.noUiSlider.on('update', (values, handle) => {
@@ -32,7 +32,7 @@ rangeSlider.noUiSlider.on('update', (values, handle) => {
 // Switch Toggle
 document.querySelectorAll('input[name="country"]').forEach((radio) => {
   radio.addEventListener('change', function () {
-    document.querySelectorAll('.option').forEach((option) => {
+    document.querySelectorAll('.switch__option').forEach((option) => {
       option.classList.remove('selected');
     });
     if (this.checked) {
@@ -44,6 +44,6 @@ document.querySelectorAll('input[name="country"]').forEach((radio) => {
 document.addEventListener('DOMContentLoaded', () => {
   const checkedRadio = document.querySelector('input[name="country"]:checked');
   if (checkedRadio) {
-    checkedRadio.closest('.option').classList.add('selected');
+    checkedRadio.closest('.switch__option').classList.add('selected');
   }
 });

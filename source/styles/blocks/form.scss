@@ -1,0 +1,29 @@
+.form__legend {
+  @include font(600, 16px, 24px);
+  margin-bottom: 20px;
+}
+
+.form__list {
+  @include list-reset();
+  @include flex(column, flex-start, flex-start, wrap);
+}
+
+.form__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form__field {
+  margin-bottom: 30px;
+}
+
+.form__buttons {
+  margin-bottom: 40px;
+}
+
+.form__button {
+  width: 100%;
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}

@@ -29,6 +29,12 @@ img {
   object-fit: contain;
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -46,8 +52,7 @@ img {
   overflow: hidden;
 }
 
-.container{
+.container {
   padding-left: 20px;
   padding-right: 20px;
 }
-

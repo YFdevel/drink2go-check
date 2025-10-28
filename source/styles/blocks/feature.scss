@@ -1,8 +1,7 @@
-.feature{
+.feature {
   @include flex(column, flex-start, stretch, wrap);
   text-align: center;
 }
-
 
 .feature__icon {
   width: 46px;
@@ -26,7 +25,6 @@
   background-image: url("../../icons/features-eco-46-56.svg");
 }
 
-.feature__heading{
+.feature__heading {
   @include font(700, 18px, 32px);
 }
-

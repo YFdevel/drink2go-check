@@ -1,0 +1,53 @@
+.radio {
+  @include flex(row, flex-end, center, no-wrap);
+}
+
+.radio__label {
+  @include font(400, 16px, 24px);
+  position: relative;
+  padding: 0 0 0 34px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: $base-white-color;
+    border: 1px solid $base-grey-color;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.radio__input {
+  &[type="radio"] + label::after {
+    border-radius: 50%;
+  }
+}
+
+.radio__input:checked + label::after {
+  border: 2px solid $base-primary-color;
+  background: radial-gradient(circle at center, $base-primary-color 0%, $base-primary-color 50%, transparent 50%, transparent 100%) no-repeat center;
+  background-size: 60% 60%;
+}
+
+.radio__input:not(:disabled):hover + label::after {
+  border-color: $base-primary-color;
+}
+
+.radio__input:not(:disabled):focus + label::after {
+  outline: 2px solid $base-grey-color;
+}
+
+.radio__input:disabled {
+  border: 2px solid $base-light-grey-color;
+}
+
+.radio__input:disabled + label::after,
+.radio__input:disabled + label {
+  color: $base-grey-color;
+  pointer-events: none;
+}

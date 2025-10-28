@@ -1,0 +1,37 @@
+.card {
+  padding: 40px 20px 20px;
+  color: $base-black-color;
+  background-color: $base-white-color;
+}
+
+.card__image-wrapper {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card__title {
+  margin: 0 0 4px;
+
+  a {
+    @include font(700, 18px, 32px);
+    color: $base-black-color;
+    text-decoration: none;
+  }
+}
+
+.card__description {
+  margin: 0 0 16px;
+}
+
+.card__button {
+  @include font(400, 14px, 20px);
+  padding-left: 46px;
+  background-image: url("../../icons/catalog-cart-icon.svg");
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}
+
+.card__submit {
+  @include flex(row, space-between, center, wrap);
+}

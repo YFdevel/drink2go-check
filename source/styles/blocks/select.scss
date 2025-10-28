@@ -1,0 +1,53 @@
+.select {
+  @include flex(row, space-between, center, wrap);
+  margin-bottom: 20px;
+}
+
+.select__label {
+  @include font(600, 16px, 24px);
+}
+
+.select__self {
+  margin: 0;
+  width: fit-content;
+  padding: 4px 30px 4px 10px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+
+  @include font(600, 16px, 24px);
+  color: $base-primary-color;
+  appearance: none;
+  background-image: url("../../icons/select-arrow.svg");
+  background-size: 10px 6px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.select__self:hover {
+  border-color: $base-primary-color;
+}
+
+.select__self:focus {
+  border-color: $base-primary-color;
+  outline: none;
+}
+
+.select__self:focus:not(:focus-visible) {
+  border-color: $base-grey-color;
+}
+
+.select__self:focus-visible {
+  border-color: $base-primary-color;
+  outline: none;
+}
+
+.select__self:active {
+  border-color: $base-primary-color;
+  outline: none;
+}
+
+.select__self[disabled] {
+  border-color: $base-light-grey-color;
+  color: $base-grey-color;
+}

@@ -1,20 +1,20 @@
-.features{
+.features {
   padding-top: 50px;
   padding-bottom: 60px;
 }
 
-.features__sign{
+.features__sign {
   margin: 0 0 4px;
 }
 
-.features__title{
+.features__title {
   margin: 0 0 36px;
 }
 
-.features__list{
+.features__list {
   @include list-reset();
 }
 
-.features__item:not(:last-child){
+.features__item:not(:last-child) {
   margin-bottom: 32px;
 }

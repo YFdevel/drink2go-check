@@ -1,4 +1,4 @@
-.section-sign{
+.section-sign {
   @include font(700, 12px, 16px, normal);
   letter-spacing: 0.04em;
   color: $base-primary-color;
@@ -6,7 +6,27 @@
   text-align: center;
 }
 
-.section-title{
+.section-title {
   @include font(700, 24px, 36px);
   text-align: center;
+}
+
+.button {
+  @include button-reset();
+  background-color: $base-primary-color;
+  font-family: $base-font-family;
+
+  @include font(400, 16px, 24px);
+  color: $base-white-color;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+.button--reset {
+  background-color: $base-white-color;
+  color: $base-primary-color;
+}
+
+.price {
+  @include font(600, 20px, 32px);
 }
