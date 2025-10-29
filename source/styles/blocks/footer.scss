@@ -5,6 +5,12 @@
   min-height: 60px;
   border-bottom: 1px solid $base-secondary-color;
   padding: 22px 0;
+
+  @include tablet {
+    padding-top: 42px;
+    padding-right: 32px;
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .footer__logo-sign {
@@ -49,6 +55,11 @@
     background: $base-grey-color;
 
     @include mask-image("../../icons/social-vk-20-20.svg");
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -93,6 +104,10 @@
   padding-top: 20px;
   padding-bottom: 28px;
   border-bottom: 1px solid $base-secondary-color;
+
+  @include tablet {
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .footer__link {
@@ -145,5 +160,15 @@
 }
 
 .footer__develop-info {
+  margin: 0;
+
   @include flex(row, center, center, no-wrap);
+}
+
+.footer__links {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }

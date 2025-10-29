@@ -46,4 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (checkedRadio) {
     checkedRadio.closest('.switch__option').classList.add('selected');
   }
+  // Mobile Menu
+  const mobileButton = document.querySelector('.header__mobile-menu');
+  const nav = document.querySelector('.header__nav');
+
+  mobileButton.addEventListener('click', (event) => {
+    event.target.classList.toggle('opened');
+    nav.classList.toggle('active');
+  });
 });

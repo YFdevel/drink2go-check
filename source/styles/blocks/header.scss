@@ -2,12 +2,21 @@
   background-color: $base-white-color;
   color: $base-black-color;
   min-height: 60px;
+  position: relative;
 
   @include flex(row, flex-end, center, wrap);
+
+  @include tablet {
+    justify-content: space-between;
+  }
 }
 
 .header__logo-wrapper {
   margin-right: auto;
+
+  @include tablet {
+    margin-right: 20px;
+  }
 }
 
 .header__logo-sign {
@@ -38,12 +47,58 @@
   }
 }
 
+.header__mobile-menu.opened {
+  &::before {
+    @include mask-image("../../icons/header-menu-close-16-16.svg");
+  }
+}
+
 .header__nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $base-white-color;
+  color: $base-black-color;
+  z-index: 3;
   display: none;
 
   @include tablet {
     display: block;
+    position: static;
+    width: auto;
   }
+}
+
+.header__nav.active {
+  display: block;
+}
+
+.header__nav-list {
+  @include list-reset();
+
+  @include tablet {
+    @include flex(row, flex-start, center, wrap);
+  }
+}
+
+.header__nav-item {
+  @include flex(row, center, center, no-wrap);
+  border-top: 1px solid $base-secondary-color;
+}
+
+.header__nav-link {
+  @include font(500, 12px, 16px);
+  display: inline-block;
+  padding: 20px;
+  color: $base-black-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.header__nav-link.current {
+  border-bottom: 2px solid $base-primary-color;
 }
 
 .header__user-wrapper {
@@ -51,6 +106,10 @@
 
   a {
     @include flex(row, flex-start, center, no-wrap);
+
+    @include tablet {
+      margin-left: 22px;
+    }
   }
 }
 

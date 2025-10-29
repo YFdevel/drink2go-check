@@ -1,0 +1,16 @@
+.slide {
+  @include tablet {
+    @include flex(column-reverse, flex-start, center, wrap);
+  }
+}
+
+.slide__image-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.slide__content {
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}

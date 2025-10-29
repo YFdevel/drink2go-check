@@ -1,7 +1,11 @@
 .pagination {
   @include list-reset();
-  @include flex(row, flex-start, stretch, wrap);
+  @include flex(row, center, stretch, wrap);
   width: 100%;
+
+  @include tablet {
+    justify-content: flex-end;
+  }
 }
 
 .pagination__item {

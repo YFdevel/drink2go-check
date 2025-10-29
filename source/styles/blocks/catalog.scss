@@ -2,11 +2,22 @@
   padding-top: 50px;
   padding-bottom: 44px;
   background-color: $bg-lightest-grey-color;
+
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
 }
 
 .catalog__list {
   @include list-reset();
   margin-bottom: 40px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 .catalog__sign {
@@ -15,4 +26,12 @@
 
 .catalog__title {
   margin: 0 0 20px;
+}
+
+.catalog__filter {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
 }
