@@ -9,6 +9,12 @@
     gap: 20px;
     text-align: left;
   }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 .feature__icon {

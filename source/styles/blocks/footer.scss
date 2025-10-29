@@ -1,3 +1,11 @@
+.footer {
+  @include desktop {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+  }
+}
+
 .footer__top {
   @include flex(row, space-between, center, wrap);
   background-color: $base-white-color;
@@ -10,6 +18,13 @@
     padding-top: 42px;
     padding-right: 32px;
     border-bottom: 1px solid transparent;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
   }
 }
 
@@ -156,6 +171,10 @@
 
       @include mask-image("../../icons/develop-logo-12-16.svg");
     }
+  }
+
+  @include desktop {
+    grid-column: 1 / -1;
   }
 }
 

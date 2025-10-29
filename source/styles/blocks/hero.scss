@@ -9,6 +9,11 @@
     padding-top: 60px;
     padding-bottom: 0;
   }
+
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
 }
 
 .promo__sign {
@@ -16,6 +21,10 @@
 
   @include tablet {
     margin-top: 0;
+  }
+
+  @include desktop {
+    text-align: left;
   }
 }
 
@@ -30,6 +39,10 @@
     line-height: 80px;
     margin-bottom: 16px;
   }
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .promo__description {
@@ -42,6 +55,10 @@
     line-height: 32px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  @include desktop {
+    text-align: left;
   }
 }
 
@@ -65,6 +82,10 @@
 
   @include tablet {
     justify-content: center;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
   }
 }
 
@@ -102,4 +123,23 @@
   &::before {
     @include mask-image("../../icons/pagination-arrow-right.svg");
   }
+}
+
+.hero__slider-dots {
+  @include flex(row, center, center, wrap);
+}
+
+.dot {
+  display: inline-block;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white-color;
+}
+
+.dot:not(:last-child) {
+  margin-right: 4px;
+}
+
+.dot.active {
+  background-color: $base-primary-color;
 }

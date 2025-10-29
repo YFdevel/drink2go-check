@@ -18,6 +18,10 @@
   @include tablet {
     margin-bottom: 40px;
   }
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
 }
 
 .form__buttons {
@@ -28,6 +32,10 @@
     margin-bottom: 44px;
 
     @include flex(row, center, center, wrap);
+  }
+
+  @include desktop {
+    justify-content: space-between;
   }
 }
 

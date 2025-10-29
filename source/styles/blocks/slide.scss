@@ -2,11 +2,20 @@
   @include tablet {
     @include flex(column-reverse, flex-start, center, wrap);
   }
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .slide__image-wrapper {
   width: 100%;
   text-align: center;
+
+  @include desktop {
+    width: auto;
+    margin-right: 30px;
+  }
 }
 
 .slide__content {
