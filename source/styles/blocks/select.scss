@@ -5,12 +5,17 @@
 
   @include tablet {
     justify-content: flex-end;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
+    padding-left: 0;
   }
 }
 
 .select__label {
   @include font(600, 16px, 24px);
+
+  @include tablet {
+    padding-right: 14px;
+  }
 }
 
 .select__self {
@@ -28,6 +33,10 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: right 8px center;
+
+  @include tablet {
+    padding-right: 26px;
+  }
 }
 
 .select__self:hover {

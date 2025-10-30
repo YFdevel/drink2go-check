@@ -13,6 +13,10 @@
 
 .no-ui-slider__label {
   width: 42%;
+
+  @include tablet {
+    width: 40%;
+  }
 }
 
 .no-ui-slider__field {
@@ -48,6 +52,10 @@
   border: none;
   background-color: #dedede;
   margin-bottom: 34px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
 }
 
 // stylelint-disable-next-line

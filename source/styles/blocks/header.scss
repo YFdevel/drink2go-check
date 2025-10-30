@@ -7,7 +7,11 @@
   @include flex(row, flex-end, center, wrap);
 
   @include tablet {
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-top: 8px;
+    padding-bottom: 0;
+    padding-right: 40px;
+    min-height: 80px;
   }
 }
 
@@ -17,7 +21,8 @@
   margin-right: auto;
 
   @include tablet {
-    margin-right: 20px;
+    margin-right: 66px;
+    padding-top: 0;
   }
 }
 
@@ -46,6 +51,7 @@
   }
 
   @include tablet {
+    margin-left: 0;
     display: none;
   }
 }
@@ -67,9 +73,10 @@
   display: none;
 
   @include tablet {
-    display: block;
+    display: flex;
     position: static;
     width: fit-content;
+    max-width: 68%;
   }
 }
 
@@ -94,6 +101,10 @@
   }
 }
 
+.header__nav-item:not(:last-child) {
+  margin-right: 3px;
+}
+
 .header__nav-link {
   @include font(500, 12px, 16px);
   display: inline-block;
@@ -102,6 +113,10 @@
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 2px solid transparent;
+
+  @include tablet {
+    padding: 22px 20px 29px;
+  }
 
   @include desktop {
     padding: 22px 20px;
@@ -115,34 +130,37 @@
 .header__user-wrapper {
   @include flex(row, flex-start, center, wrap);
 
+  @include tablet {
+    margin-left: auto;
+  }
+
   a {
     @include flex(row, flex-start, center, no-wrap);
     @include font(500, 12px, 16px);
     color: $base-black-color;
     text-transform: uppercase;
     text-decoration: none;
-
-    @include tablet {
-      margin-left: 22px;
-    }
   }
+}
+
+.header__user-cart {
+  margin-left: 44px;
 }
 
 .header__user-ico {
   &::before {
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     display: block;
     background: $base-black-color;
+    margin-top: -8px;
 
     @include mask-image("../../icons/header-user-16-16.svg");
   }
 }
 
 .header__user-ico--cart {
-  margin-left: 44px;
-
   &::before {
     @include mask-image("../../icons/header-basket-16-16.svg");
   }

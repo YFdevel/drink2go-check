@@ -5,7 +5,7 @@
 
   @include tablet {
     padding-top: 80px;
-    padding-bottom: 90px;
+    padding-bottom: 78px;
   }
 }
 
@@ -16,7 +16,8 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 10px 30px;
+    margin-bottom: 48px;
   }
 
   @include desktop {
@@ -30,6 +31,10 @@
 
 .catalog__title {
   margin: 0 0 20px;
+
+  @include tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .catalog__filter {

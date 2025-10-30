@@ -15,8 +15,7 @@
   padding: 17px 0;
 
   @include tablet {
-    padding-top: 42px;
-    padding-right: 32px;
+    padding-top: 37px;
     border-bottom: 1px solid transparent;
   }
 
@@ -126,6 +125,7 @@
 
   @include tablet {
     border-bottom: 1px solid transparent;
+    padding-top: 10px;
   }
 }
 
@@ -151,6 +151,18 @@
   letter-spacing: 0;
 }
 
+.footer__link--address {
+  @include tablet {
+    max-width: 96%;
+  }
+}
+
+.footer__link--address br {
+  @include tablet {
+    display: none;
+  }
+}
+
 .footer__link--address::before,
 .footer__link--phone::before {
   content: "";
@@ -161,6 +173,12 @@
   margin-right: 2px;
 
   @include mask-image("../../icons/contacts-address-13-16.svg");
+
+  @include tablet {
+    margin-right: 5px;
+    width: 19px;
+    height: 19px;
+  }
 }
 
 .footer__link--phone::before {
@@ -188,6 +206,10 @@
 
       @include mask-image("../../icons/develop-logo-12-16.svg");
     }
+  }
+
+  @include tablet {
+    padding-top: 8px;
   }
 
   @include desktop {

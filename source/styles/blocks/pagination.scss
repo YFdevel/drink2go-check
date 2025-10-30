@@ -15,6 +15,10 @@
 
   &:not(:last-child) {
     margin-right: 20px;
+
+    @include tablet {
+      margin-right: 21px;
+    }
   }
 }
 
@@ -30,6 +34,10 @@
   border-radius: 4px;
   transition: 0.6s;
   border: 1px solid transparent;
+
+  @include tablet {
+    padding: 8px 12px;
+  }
 }
 
 .pagination__link.current {
@@ -56,6 +64,7 @@
 
     @include tablet {
       display: block;
+      padding: 8px 18px;
     }
   }
 }
