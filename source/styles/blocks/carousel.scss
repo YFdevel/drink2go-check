@@ -1,0 +1,90 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__arrows {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include flex(row, space-between, center);
+  width: 100%;
+}
+
+.carousel__button {
+  @include button-reset();
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: $base-primary-color;
+
+    @include mask-image("../../icons/pagination-arrow-left.svg");
+  }
+}
+
+.carousel__button--next {
+  &::before {
+    @include mask-image("../../icons/pagination-arrow-right.svg");
+  }
+}
+
+
+//.slider-pagination {
+//  display: flex;
+//  justify-content: center;
+//  gap: 10px;
+//  margin-top: 20px;
+//}
+//
+//.dot {
+//  width: 12px;
+//  height: 12px;
+//  border-radius: 50%;
+//  background-color: #ccc;
+//  cursor: pointer;
+//  transition: background-color 0.3s ease;
+//}
+//
+//.dot.active {
+//  background-color: #333;
+//}
+//
+//.dot:hover {
+//  background-color: #666;
+//}
+//
+//.carousel__arrows {
+//  position: absolute;
+//  top: 50%;
+//  left: 0;
+//  right: 0;
+//  display: flex;
+//  justify-content: space-between;
+//  transform: translateY(-50%);
+//  pointer-events: none;
+//}
+//
+//.carousel__button {
+//  pointer-events: all;
+//  background: rgba(255, 255, 255, 0.8);
+//  border: none;
+//  width: 40px;
+//  height: 40px;
+//  border-radius: 50%;
+//  cursor: pointer;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  transition: background-color 0.3s ease;
+//}
+
+//.carousel__button:hover {
+//  background: rgba(255, 255, 255, 1);
+//}

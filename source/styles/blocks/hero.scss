@@ -16,130 +16,22 @@
   }
 }
 
-.promo__sign {
-  margin: 10px 0 4px;
-
-  @include tablet {
-    margin-top: 0;
-  }
-
-  @include desktop {
-    text-align: left;
-  }
-}
-
-.promo__title {
-  @include font(700, 36px, 48px, normal);
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin: 0 0 10px;
-
-  @include tablet {
-    font-size: 56px;
-    line-height: 80px;
-    margin-bottom: 16px;
-  }
-
-  @include desktop {
-    text-align: left;
-  }
-}
-
-.promo__description {
-  text-align: center;
-  margin: 0 0 20px;
-  width: 100%;
-
-  @include tablet {
-    font-size: 20px;
-    line-height: 32px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @include desktop {
-    text-align: left;
-  }
-}
-
-.promo__description .new-line {
+.hero__slider-dots {
   display: none;
 
-  @include tablet {
-    display: block;
+  @include desktop {
+    @include flex(row, center, center, wrap);
   }
 }
 
-.promo__price--old {
-  @include font(400, 16px, 32px);
-  color: $base-primary-color;
-  text-decoration: line-through;
-}
-
-.promo__footer {
-  @include flex(row, space-between, center, wrap);
-  padding: 0 15px;
+.hero__slider {
+  height: 656px;
 
   @include tablet {
-    justify-content: center;
+    height: 828px;
   }
 
   @include desktop {
-    justify-content: flex-start;
+    height: 714px;
   }
-}
-
-.promo__prices {
-  @include tablet {
-    margin-right: 20px;
-  }
-}
-
-.carousel__arrows {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @include flex(row, space-between, center);
-  width: 100%;
-}
-
-.carousel__button {
-  @include button-reset();
-
-  &::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    display: block;
-    background: $base-primary-color;
-
-    @include mask-image("../../icons/pagination-arrow-left.svg");
-  }
-}
-
-.carousel__button--next {
-  &::before {
-    @include mask-image("../../icons/pagination-arrow-right.svg");
-  }
-}
-
-.hero__slider-dots {
-  @include flex(row, center, center, wrap);
-}
-
-.dot {
-  display: inline-block;
-  width: 62px;
-  height: 4px;
-  background-color: $base-white-color;
-}
-
-.dot:not(:last-child) {
-  margin-right: 4px;
-}
-
-.dot.active {
-  background-color: $base-primary-color;
 }

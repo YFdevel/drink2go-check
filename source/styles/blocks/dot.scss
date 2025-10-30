@@ -1,0 +1,16 @@
+.dot {
+  display: inline-block;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:not(:last-child) {
+  margin-right: 4px;
+}
+
+.dot.active {
+  background-color: $base-primary-color;
+}

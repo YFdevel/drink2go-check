@@ -1,11 +1,26 @@
 .slide {
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column wrap;
+  display: none;
+  position: relative;
+  height: inherit;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
   @include tablet {
     @include flex(column-reverse, flex-start, center, wrap);
+    display: none;
   }
 
   @include desktop {
     flex-direction: row;
   }
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
 }
 
 .slide__image-wrapper {
@@ -22,4 +37,13 @@
   @include tablet {
     margin-bottom: 24px;
   }
+}
+
+.slide__content-test {
+  height: 100%;
+  font-size: 44px;
+  line-height: 45px;
+  position: absolute;
+  top: 40%;
+  left: 45%;
 }
