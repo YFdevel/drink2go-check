@@ -1,6 +1,7 @@
 .select {
   @include flex(row, space-between, center, wrap);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+  padding-left: 4px;
 
   @include tablet {
     justify-content: flex-end;
@@ -14,19 +15,19 @@
 
 .select__self {
   margin: 0;
-  width: fit-content;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 24px 4px 8px;
   border: 2px solid transparent;
   border-radius: 4px;
 
   @include font(600, 16px, 24px);
+  letter-spacing: 0.05em;
   color: $base-primary-color;
   appearance: none;
   background-image: url("../../icons/select-arrow.svg");
   background-size: 10px 6px;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 8px center;
 }
 
 .select__self:hover {

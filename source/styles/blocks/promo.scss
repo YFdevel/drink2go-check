@@ -1,5 +1,5 @@
 .promo__sign {
-  margin: 10px 0 4px;
+  margin: 4px 0;
 
   @include tablet {
     margin-top: 0;
@@ -29,7 +29,7 @@
 
 .promo__description {
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 0 21px;
   width: 100%;
 
   @include tablet {
@@ -56,15 +56,11 @@
   @include font(400, 16px, 32px);
   color: $base-primary-color;
   text-decoration: line-through;
+  margin-right: 2px;
 }
 
 .promo__footer {
-  @include flex(row, space-between, center, wrap);
-  padding: 0 15px;
-
-  @include tablet {
-    justify-content: center;
-  }
+  @include flex(row, center, center, wrap);
 
   @include desktop {
     justify-content: flex-start;
@@ -72,7 +68,5 @@
 }
 
 .promo__prices {
-  @include tablet {
-    margin-right: 20px;
-  }
+  margin-right: 22px;
 }

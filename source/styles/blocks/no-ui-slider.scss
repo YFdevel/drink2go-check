@@ -8,18 +8,19 @@
   width: 100%;
 
   @include flex(row, space-between, center, no-wrap);
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
 }
 
 .no-ui-slider__label {
-  min-width: 30%;
+  width: 42%;
 }
 
 .no-ui-slider__field {
   width: 100%;
   font-size: 20px;
+  letter-spacing: 0;
   text-align: center;
-  padding: 8px 10px;
+  padding: 6px 10px;
   border: 2px solid $base-primary-lighter-color;
   border-radius: 4px;
   background-color: $base-white-color;
@@ -46,7 +47,7 @@
   height: 4px;
   border: none;
   background-color: #dedede;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 // stylelint-disable-next-line

@@ -1,5 +1,13 @@
 .form__legend {
   @include font(600, 16px, 24px);
+  margin-bottom: 30px;
+}
+
+.form__legend--milk {
+  margin-bottom: 19px;
+}
+
+.form__legend--country {
   margin-bottom: 20px;
 }
 
@@ -13,7 +21,7 @@
 }
 
 .form__field {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   @include tablet {
     margin-bottom: 40px;
@@ -24,8 +32,17 @@
   }
 }
 
+.form__field--milk {
+  margin-bottom: 30px;
+}
+
+.form__field--country {
+  margin-bottom: 30px;
+}
+
+
 .form__buttons {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @include tablet {
     grid-column: 1 / -1;

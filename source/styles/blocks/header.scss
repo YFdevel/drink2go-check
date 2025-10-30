@@ -12,12 +12,12 @@
 }
 
 .header__logo-wrapper {
+  @include flex(row, flex-start, center, wrap);
+  padding-top: 4px;
   margin-right: auto;
 
   @include tablet {
     margin-right: 20px;
-
-    @include flex(row, flex-start, center, wrap);
   }
 }
 
@@ -33,7 +33,7 @@
 .header__mobile-menu {
   @include button-reset();
   order: 2;
-  margin-left: 22px;
+  margin-left: 34px;
 
   &::before {
     content: "";
@@ -141,7 +141,7 @@
 }
 
 .header__user-ico--cart {
-  margin-left: 22px;
+  margin-left: 44px;
 
   &::before {
     @include mask-image("../../icons/header-basket-16-16.svg");

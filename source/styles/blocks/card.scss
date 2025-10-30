@@ -6,7 +6,7 @@
 
 .card__image-wrapper {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .card__title {
@@ -20,7 +20,11 @@
 }
 
 .card__description {
-  margin: 0 0 16px;
+  margin: 0 0 17px;
+}
+
+.card__price {
+  margin: 0;
 }
 
 .card__button {

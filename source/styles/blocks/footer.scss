@@ -12,7 +12,7 @@
   color: $base-black-color;
   min-height: 60px;
   border-bottom: 1px solid $base-secondary-color;
-  padding: 22px 0;
+  padding: 17px 0;
 
   @include tablet {
     padding-top: 42px;
@@ -64,8 +64,8 @@
 
   &::before {
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     display: block;
     background: $base-grey-color;
 
@@ -104,7 +104,7 @@
   @include font(700, 14px, 20px);
   letter-spacing: 0.02em;
   color: $base-primary-color;
-  margin-bottom: 12px;
+  margin: 0 0 20px;
 }
 
 .footer__list {
@@ -112,11 +112,15 @@
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.footer__block .footer__item--address {
+  margin-bottom: 16px;
 }
 
 .footer__block {
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 28px;
   border-bottom: 1px solid $base-secondary-color;
 
@@ -125,20 +129,33 @@
   }
 }
 
+.footer__block--contacts {
+  padding-bottom: 22px;
+}
+
 .footer__link {
   @include font(500, 12px, 16px);
   @include flex(row, flex-start, flex-start, no-wrap);
   letter-spacing: 0.02em;
   color: $base-black-color;
   text-decoration: none;
+}
+
+.footer__link:not(.footer__link--address) {
   text-transform: uppercase;
+}
+
+.footer__link--address,
+.footer__link--phone {
+  @include font(400, 14px, 20px);
+  letter-spacing: 0;
 }
 
 .footer__link--address::before,
 .footer__link--phone::before {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   display: inline-block;
   background: $base-primary-color;
   margin-right: 2px;
@@ -152,7 +169,7 @@
 
 .footer__develop {
   @include font(400, 12px, 16px);
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 30px;
   color: $base-grey-color;
 

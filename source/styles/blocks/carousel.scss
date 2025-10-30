@@ -1,16 +1,15 @@
 .carousel {
   position: relative;
-  overflow: hidden;
 }
 
 .carousel__arrows {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
 
   @include flex(row, space-between, center);
-  width: 100%;
+  width: 100vw;
 }
 
 .carousel__button {

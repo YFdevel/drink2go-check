@@ -10,7 +10,7 @@
   height: 24px;
 
   @include flex(row, flex-start, center, no-wrap);
-  padding: 0 0 0 52px;
+  padding: 0 0 0 45px;
 }
 
 .switch__option input {
@@ -70,7 +70,9 @@
 
 .switch__label {
   cursor: pointer;
-
-  @include font(400, 16px, 24px);
   position: relative;
+}
+
+.switch__sign {
+  @include font(400, 16px, 24px);
 }
