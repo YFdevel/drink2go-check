@@ -16,6 +16,10 @@
   @include tablet {
     padding-right: 14px;
   }
+
+  @include desktop {
+    padding-right: 12px;
+  }
 }
 
 .select__self {
@@ -36,6 +40,11 @@
 
   @include tablet {
     padding-right: 26px;
+  }
+
+  @include desktop {
+    padding-right: 48px;
+    background-position: right 28px center;
   }
 }
 

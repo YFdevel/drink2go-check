@@ -7,6 +7,11 @@
     padding-top: 80px;
     padding-bottom: 78px;
   }
+
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
 }
 
 .catalog__list {
@@ -22,6 +27,8 @@
 
   @include desktop {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 38px;
   }
 }
 
@@ -45,10 +52,11 @@
   }
 
   @include desktop {
-    max-width: 318px;
+    max-width: 337px;
     grid-template-columns: 1fr;
-    padding-top: 20px;
+    padding-top: 18px;
     align-content: start;
+    padding-left: 20px;
   }
 }
 
@@ -62,4 +70,10 @@
 
 .catalog__list-item {
   margin-bottom: 20px;
+}
+
+.catalog__content {
+  @include desktop {
+    padding-top: 12px;
+  }
 }

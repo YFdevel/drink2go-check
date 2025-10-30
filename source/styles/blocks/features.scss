@@ -9,7 +9,7 @@
 
   @include desktop {
     padding-top: 100px;
-    padding-bottom: 120px;
+    padding-bottom: 88px;
   }
 }
 
@@ -41,7 +41,9 @@
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

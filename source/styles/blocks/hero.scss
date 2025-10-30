@@ -6,13 +6,13 @@
   position: relative;
 
   @include tablet {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 0;
   }
 
   @include desktop {
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
   }
 }
 
@@ -24,14 +24,15 @@
   }
 }
 
-//.hero__slider {
-//  height: 656px;
-//
-//  @include tablet {
-//    height: 828px;
-//  }
-//
-//  @include desktop {
-//    height: 714px;
-//  }
-//}
+.hero__slider {
+  //height: 656px;
+
+  @include tablet {
+    //height: 828px;
+  }
+
+  @include desktop {
+    //height: 714px;
+    margin-bottom: 5px;
+  }
+}
