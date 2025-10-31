@@ -36,10 +36,12 @@
 
 .radio__input:not(:disabled):hover + label::after {
   border-color: $base-primary-color;
+  cursor: pointer;
 }
 
 .radio__input:not(:disabled):focus + label::after {
   outline: 2px solid $base-grey-color;
+  cursor: pointer;
 }
 
 .radio__input:disabled {

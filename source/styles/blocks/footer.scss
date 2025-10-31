@@ -245,3 +245,17 @@
     gap: 15px;
   }
 }
+
+.footer a:hover,
+.footer a:focus {
+  color: $base-primary-color;
+}
+
+.footer a:hover::before,
+.footer a:focus::before {
+  background-color: $base-primary-color;
+}
+
+.footer a:active {
+  background-color: $base-secondary-color;
+}
